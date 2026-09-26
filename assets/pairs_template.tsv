@@ -1,0 +1,2 @@
+pair_id	cohort	donor_sample_id	recipient_sample_id	link_type	donor_onset_date	recipient_onset_date	notes
+COL_001	Colangeli2018	SAMPLE_INDEX_1	SAMPLE_CONTACT_1	household	YYYY-MM-DD	YYYY-MM-DD	verified by hand
