@@ -2,6 +2,8 @@
 
 Pipeline to prepare within-host variant data from epidemiologically linked donor–recipient pairs for transmission bottleneck estimation. It takes per-sample BAMs and unfiltered LoFreq VCFs produced by [mtb-call2](https://github.com/ksw9/mtb-call2), re-counts alleles at every candidate site in both members of each pair, and outputs a single table ready for beta-binomial bottleneck estimators. The pipeline is written in Nextflow.
 
+> **Status: first version, not yet validated on real data.** The pipeline has so far only been tested on synthetic data: simulated reads at known allele frequencies on a small test genome, with LoFreq-format VCFs written by hand rather than produced by mtb-call2. Only the local profile has been run; the `chpc` and `docker` profiles are untested. Please check results carefully and report issues.
+
 ## Pipeline steps
 
 * **COUNT_PAIR** (per pair)
@@ -91,3 +93,7 @@ run_viralbottleneck(sites, method = "Beta_binomial_Exact", variant_calling = 0.0
 </pre>
 
 See [docs/details.md](docs/details.md) for column definitions, estimator options and known limitations.
+
+## License
+
+Released under the [MIT License](LICENSE). The PE/PPE mask in `assets/H37Rv_ppe.bed.gz` is taken from [mtb-call2](https://github.com/ksw9/mtb-call2) and is not covered by this license.
