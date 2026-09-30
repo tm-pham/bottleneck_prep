@@ -1,6 +1,9 @@
+.DS_Store
 work/
 .nextflow/
 .nextflow.log*
 results/
 tests/data/
 tests/results/
+docs/appendix_bottleneck_prep.docx
+docs/next_steps.md
